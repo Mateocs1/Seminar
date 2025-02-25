@@ -320,10 +320,10 @@ void SystemClock_Config(void)
 
 /* USER CODE BEGIN 4 */
 void Write(uint8_t address, uint8_t reg, uint8_t data) {
- 	uint8_t dt[2];
- 	dt[0] = reg;
- 	dt[1] = data;
- 	HAL_I2C_Master_Transmit(&hi2c1, address, dt, 2, 10);
+ 	uint8_t a[2];
+ 	a[0] = reg;
+ 	a[1] = data;
+ 	HAL_I2C_Master_Transmit(&hi2c1, address, a, 2, 10);
  }
 
 void WriteMulti(uint8_t address, uint8_t reg, uint8_t* data, uint16_t count) {
