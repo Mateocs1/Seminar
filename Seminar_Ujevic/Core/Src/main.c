@@ -153,9 +153,6 @@ int main(void)
   uint16_t switchState;
   HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_2);
 
-#define WRITECOMMAND(command) ssd1306_I2C_Write(SSD1306_I2C_ADDR, 0x00, (command))
-
-
 HAL_Delay(100);
 //provjera konekcije OLED-a s I2C
   	if (HAL_I2C_IsDeviceReady(&hi2c1,ADDR, 1, 20000) != HAL_OK) {
@@ -272,20 +269,7 @@ HAL_Delay(100);
 	  	           }else{
 	  	           HAL_GPIO_WritePin(GPIOA, GPIO_PIN_6, GPIO_PIN_RESET);
 	  	           __HAL_TIM_SET_COMPARE(&htim2,TIM_CHANNEL_2,1000);
-
-
-	  	        }
-	  	        if(switchState == 1){
-	  	        	HAL_GPIO_WritePin(GPIOA, GPIO_PIN_7, GPIO_PIN_SET);
-	  	       	    }else{
-	  	       	    	HAL_GPIO_WritePin(GPIOA, GPIO_PIN_7, GPIO_PIN_RESET);
-	  	       	    }
-	  	        if(udaljenost < 10){
-	  	        	HAL_GPIO_WritePin(GPIOA, GPIO_PIN_6, GPIO_PIN_SET);
-	  	        	}else{
-	  	        		HAL_GPIO_WritePin(GPIOA, GPIO_PIN_6, GPIO_PIN_RESET);
-	  	        	}
-
+	  	           }
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

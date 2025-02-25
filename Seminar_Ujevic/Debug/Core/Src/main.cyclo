@@ -1,10 +1,10 @@
 ../Core/Src/main.c:65:6:mikrosekunda	2
 ../Core/Src/main.c:78:6:HAL_TIM_IC_CaptureCallback	5
 ../Core/Src/main.c:109:6:UZ_Read	1
-../Core/Src/main.c:123:5:main	11
-../Core/Src/main.c:300:6:SystemClock_Config	3
-../Core/Src/main.c:338:6:Write	1
-../Core/Src/main.c:345:6:WriteMulti	2
-../Core/Src/main.c:354:6:WritePixel	2
-../Core/Src/main.c:362:6:WriteBitmap	7
-../Core/Src/main.c:385:6:Error_Handler	1
+../Core/Src/main.c:123:5:main	9
+../Core/Src/main.c:284:6:SystemClock_Config	3
+../Core/Src/main.c:322:6:Write	1
+../Core/Src/main.c:329:6:WriteMulti	2
+../Core/Src/main.c:338:6:WritePixel	2
+../Core/Src/main.c:346:6:WriteBitmap	7
+../Core/Src/main.c:369:6:Error_Handler	1
